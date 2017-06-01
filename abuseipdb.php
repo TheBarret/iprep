@@ -9,10 +9,10 @@
 */
 
 // Your AbuseIPdb.com API key (register at website to get one)
-$key		= "BQYGAtOGLXAjHVRz48QNCbFtkosH4v6ANFh3CEHa";
+$key		= "<your api key>";
 
 // Url to redirect user if any reports are present
-$redirect 	= "https://for.mywire.org/error.php?code=500";
+$redirect 	= "http://www.google.com";
 
 // Fetch report count with given parameters and take action if condition is met
 if (abuseipdb_check($key,$_SERVER['REMOTE_ADDR'],30) > 0) { header("Location: $redirect"); }
