@@ -1,7 +1,7 @@
 <?php
 /*
 	ABUSEIPDB IP CHECK
-	Ver	: 1.1
+	Ver		: 1.1
 	Author	: Barret
 	Date	: 2017/5
 	
@@ -9,18 +9,16 @@
 */
 
 // Your AbuseIPdb.com API key (register at website to get one)
-$key		= "<your api key>";
+$key		= "BQYGAtOGLXAjHVRz48QNCbFtkosH4v6ANFh3CEHa";
 
 // Url to redirect user if any reports are present
-$redirect 	= "http://www.google.com";
+$redirect 	= "https://for.mywire.org/error.php?code=500";
 
 // Fetch report count with given parameters and take action if condition is met
 if (abuseipdb_check($key,$_SERVER['REMOTE_ADDR'],30) > 0) { header("Location: $redirect"); }
 
 function abuseipdb_check($key,$target,$days) {
-	$url		= "https://www.abuseipdb.com/check/$target/json?key=$key&days=$days";
-	$result		= json_decode(abuseipdb_geturl($url),true);
-	return count($result);
+	return count(json_decode(abuseipdb_geturl("https://www.abuseipdb.com/check/$target/json?key=$key&days=$days"),true));
 }
 
 function abuseipdb_geturl($url, $useragent='PHP/CURL', $headers=false, $follow_redirects=true, $debug=false) {
