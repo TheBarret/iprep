@@ -1,7 +1,7 @@
 <?php
 /*
 	ABUSEIPDB IP CHECK
-	Ver		: 1.1
+	Ver	: 1.1
 	Author	: Barret
 	Date	: 2017/5
 	
