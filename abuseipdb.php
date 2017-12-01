@@ -5,7 +5,7 @@
 	Author	: Barret
 	Date	: 2017/5
 	
-	This script is not part nor made by abuseipdb.com
+	This script is not part of nor made by abuseipdb.com
 */
 
 // Your AbuseIPdb.com API key (register at website to get one)
